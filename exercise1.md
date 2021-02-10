@@ -1,5 +1,3 @@
-## Informal Exercise
-
 ## Exercises
 
 ## 1. Get a list of all the years in this data, without any duplicates. How many unique values are there, and what are they?
