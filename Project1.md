@@ -2,7 +2,7 @@
 # **Describe what is a package? Also, describe what is a library? What are the two steps you need to execute in order to install a package and then make that library of functions accessible to your workspace and current python work session? Provide examples of how you would execute these two steps using two of the packages we have used in class thus far. Be sure to include an alias in at least one of your two examples and explain why it is a good idea to do so.**
 
 A package is a bundle/ directory of python modules. A library is a group of packages or set of useful functions so that you do not have to write the code from scratch you can just use them after you import them. For example, pandas is a very useful function in data science because it is especially useful when working with data files. In Pycharm in order to execute a function you have to preferences and then python interpreter and install the packages that you want to use. From there in the terminal, you have to import the library that the user need.
-# For example:
+For example:
 
 From datetime import date
 
@@ -13,3 +13,12 @@ Import numpy as np
 Import math
 
 By importing each of these libraries it allows the user to use the functions without having to write it themselves. Using an alias, such as when you are importing numpy and pandas allows people to use the alias, which is faster and shorter, when calling the functions that they want to use. Now instead of having to type out pandas every time the user only has to type out pd. 
+
+# Describe what is a data frame? Identify a library of functions that is particularly useful for working with data frames. In order to read a file in its remote location within the file system of your operating system, which command would you use? Provide an example of how to read a file and import it into your work session in order to create a new data frame. Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? Also, provide an example that describes a data frame you created. How do you determine how many rows and columns are in a data frame? Is there an alternate terminology for describing rows and columns?
+
+A data frame is a table of data that is represented in rows and columns. The most useful library for working with data frames is pandas. To import data, you have to use the read read_csv() function. 
+
+For example:
+
+1.assign your file to an object so you can specify where the file is located: path = ‘gapminder.tsv’
+2.import your data using the read_csv() function. Put the library and then the command itself and you do not want to forget to specify the argument to say that the file is tab separated: data = pd.read_csv(path, sep = ‘\t’)
