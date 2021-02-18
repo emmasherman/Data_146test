@@ -66,7 +66,17 @@ The alternative terminology for row is an observation and a variable for a colum
 
 # Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?
 
-# you need to do this one
+To import the data frame, assuming it is in the local folder already:
+```
+path_to_data = 'gapminder.tsv'
+data = pd.read_csv(path_to_data,sep='\t')
+```
+To look at the year variable:
+
+``` data['year']```
+
+By looking at this it can be seen that there is a regular interval of 5 years starting at 1952 going all the way to 2007. You would add 2012 and 2017 to be more current. 
+# add stretch goal if can 
 
 # Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation. 
 
@@ -81,8 +91,6 @@ Rwanda in 1992 had the lowest life expectancy, which was 23.599. This low life e
 The == is when a statement is true/equals. For example:
 
 ```x==5```
-
-means that x equals 5.
 
 | is for or, it helps to look and see if either or statement is true. For example:
 
