@@ -6,11 +6,11 @@ For example:
 
 From datetime import date
 
-`Import pandas as pd
-
+```
+Import pandas as pd
 Import numpy as np
-
-Import math`
+Import math
+```
 
 By importing each of these libraries it allows the user to use the functions without having to write it themselves. Using an alias, such as when you are importing numpy and pandas allows people to use the alias, which is faster and shorter, when calling the functions that they want to use. Now instead of having to type out pandas every time the user only has to type out pd. 
 
@@ -35,5 +35,48 @@ playlist = pd.Series(data, name='Depressing Dance Party', index = ['Intro', 'Dan
 play_frame = pd.DataFrame(playlist)
 play_frame'
 ```
+
+To create my own data frame, I used the function pd.series. I put in my data from a list, named the data frame, and then created the index that lined the data up with its respective row. Then using pd.DataFrame I created it into a data frame. To determine how many rows and columns are in a data frame you can use data.shape[0], which gives the number of rows, and data.shape[1], which gives the number of columns.
+
+The alternative terminology for row is an observation and a variable for a column.
+
+# Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?
+
+# you need to do this one
+
+# Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation. 
+
+Rwanda in 1992 had the lowest life expectancy, which was 23.599. This low life expectancy was due to an ongoing civil war that started in 1990 and was still taking place in 1992. 
+
+# Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable. Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image). Stretch goal: which of the four European countries exhibited the most significant increase in total gross domestic product during the previous 5-year period (to 2007)?
+
+# you need to do it
+
+# You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
+
+The == is when a statement is true/equals. For example:
+
+```x==5```
+
+means that x equals 5.
+
+| is for or, it helps to look and see if either or statement is true. For example:
+
+```data_place = data[(data[‘continent’]==’South America’) | (data[‘Year’]==’1992’)] ```
+
+This statement is true if either the data is from south America or 1992. It will return both rows with south America as the continent and 1992 as the year, both do not have to be true for every row. Both statements do not have to be true for the data to be returned. 
+
+& is used when subsetting because it looks at a data frame one row at a time and evaluates both conditions for that row and then move to the next one. For example:
+
+```data_place = data[(data[‘continent’]==’North America’) & (data[‘country’]==’United States’)]```
+
+Data with both north America and united states will be returned. 
+
+^ is XOR, this will return if either operation is true but not if both are true. For example:
+
+```data_place = data[(data[‘continent’]==’South America’) ^ (data[‘Year’]==’1992’)]```
+
+This will return data with South America or 1992 but not data with South America and 1992 in the row.
+
 
 
