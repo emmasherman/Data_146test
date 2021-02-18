@@ -30,9 +30,13 @@ A data frame is a table of data that is represented in rows and columns. The mos
 
 For example:
 
-1.assign your file to an object so you can specify where the file is located: path = ‘gapminder.tsv’
+1.assign your file to an object so you can specify where the file is located: 
 
-2.import your data using the read_csv() function. Put the library and then the command itself and you do not want to forget to specify the argument to say that the file is tab separated: data = pd.read_csv(path, sep = ‘\t’)
+```path = ‘gapminder.tsv’```
+
+2.import your data using the read_csv() function. Put the library and then the command itself and you do not want to forget to specify the argument to say that the file is tab separated: 
+
+```data = pd.read_csv(path, sep = ‘\t’)```
 
 Data that is saved in a different type of format needs an additional argument, which “sep=.”Specifying the “sep =” argument in the function helps python read in the dataframe. CSV files are usually comma separated files, so if you have a file that is .”.tsv” this means it is tab separated, so you would have to put “sep= ‘\t’”. The user must specify how the file is separated in order for it to be read in correctly
 
@@ -46,7 +50,17 @@ play_frame = pd.DataFrame(playlist)
 play_frame'
 ```
 
-To create my own data frame, I used the function pd.series. I put in my data from a list, named the data frame, and then created the index that lined the data up with its respective row. Then using pd.DataFrame I created it into a data frame. To determine how many rows and columns are in a data frame you can use data.shape[0], which gives the number of rows, and data.shape[1], which gives the number of columns.
+To create my own data frame, I used the function pd.series. I put in my data from a list, named the data frame, and then created the index that lined the data up with its respective row. Then using pd.DataFrame I created it into a data frame. To determine how many rows and columns are in a data frame you can use
+
+```data.shape()```
+
+For rows:
+
+```data.shape[0]``` 
+
+For columns:
+
+```data.shape[1]```
 
 The alternative terminology for row is an observation and a variable for a column.
 
