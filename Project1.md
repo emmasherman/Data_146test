@@ -12,7 +12,17 @@ Import numpy as np
 Import math
 ```
 
-By importing each of these libraries it allows the user to use the functions without having to write it themselves. Using an alias, such as when you are importing numpy and pandas allows people to use the alias, which is faster and shorter, when calling the functions that they want to use. Now instead of having to type out pandas every time the user only has to type out pd. 
+By importing each of these libraries it allows the user to use the functions without having to write it themselves. Using an alias, such as when you are importing numpy and pandas allows people to use the alias, which is faster and shorter, when calling the functions that they want to use Now instead of:
+
+```
+pandas.read_csv()
+```
+
+it is now:
+
+```
+pd.read_csv()
+```
 
 # Describe what is a data frame? Identify a library of functions that is particularly useful for working with data frames. In order to read a file in its remote location within the file system of your operating system, which command would you use? Provide an example of how to read a file and import it into your work session in order to create a new data frame. Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? Also, provide an example that describes a data frame you created. How do you determine how many rows and columns are in a data frame? Is there an alternate terminology for describing rows and columns?
 
