@@ -5,8 +5,11 @@ A package is a bundle/ directory of python modules. A library is a group of pack
 For example:
 
 From datetime import date
+
 Import pandas as pd
+
 Import numpy as np
+
 Import math
 
 By importing each of these libraries it allows the user to use the functions without having to write it themselves. Using an alias, such as when you are importing numpy and pandas allows people to use the alias, which is faster and shorter, when calling the functions that they want to use. Now instead of having to type out pandas every time the user only has to type out pd. 
