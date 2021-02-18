@@ -6,11 +6,11 @@ For example:
 
 From datetime import date
 
-Import pandas as pd
+`Import pandas as pd
 
 Import numpy as np
 
-Import math
+Import math`
 
 By importing each of these libraries it allows the user to use the functions without having to write it themselves. Using an alias, such as when you are importing numpy and pandas allows people to use the alias, which is faster and shorter, when calling the functions that they want to use. Now instead of having to type out pandas every time the user only has to type out pd. 
 
@@ -21,4 +21,19 @@ A data frame is a table of data that is represented in rows and columns. The mos
 For example:
 
 1.assign your file to an object so you can specify where the file is located: path = ‘gapminder.tsv’
+
 2.import your data using the read_csv() function. Put the library and then the command itself and you do not want to forget to specify the argument to say that the file is tab separated: data = pd.read_csv(path, sep = ‘\t’)
+
+Data that is saved in a different type of format needs an additional argument, which “sep=.”Specifying the “sep =” argument in the function helps python read in the dataframe. CSV files are usually comma separated files, so if you have a file that is .”.tsv” this means it is tab separated, so you would have to put “sep= ‘\t’”. The user must specify how the file is separated in order for it to be read in correctly
+
+Creating my own dataframe:
+
+```
+import pandas as pd
+data = ['song1', 'song2', 'song3','song4','song5','song6']
+playlist = pd.Series(data, name='Depressing Dance Party', index = ['Intro', 'Dance 1', 'Dance 2', 'Dance 3', 'Dance 4', 'Dance 5'])
+play_frame = pd.DataFrame(playlist)
+play_frame'
+```
+
+
