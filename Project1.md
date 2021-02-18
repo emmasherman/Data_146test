@@ -78,5 +78,20 @@ Data with both north America and united states will be returned.
 
 This will return data with South America or 1992 but not data with South America and 1992 in the row.
 
+# Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
 
+.iloc is used when fetching data by its integer position, for instance if you want rows 3 through 6 you can say data.iloc[2:5]. .loc on the other hand fetches rows by their label. For example, if you want to see what data is from year 2003 you can say data.loc[2003].
+# fix this one
+
+# Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
+
+# you need to do this one
+
+# Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
+
+The apply() function allows the user to apply the input to this function to an entire data frame. These inputs can include anonymous functions or lamdas that you can apply to the entire data frame. Using apply() is a good alternative to writing a loop. This a much faster and more eifficent way than writing a loop for every function you want to use on your data frame. 
+
+# Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
+
+# you need to do this one
 
