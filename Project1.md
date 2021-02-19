@@ -131,9 +131,11 @@ For example:
 import requests
 url = "https://api.covidtracking.com/v1/states/daily.csv"
 r = requests.get(url)
+file_name = data_folder
 with open(file_name, 'wb') as f:
     f.write(r.content)
 ```
+Using requests we can open and use this file on our local instance.
 
 # Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
 
