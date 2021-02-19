@@ -53,37 +53,49 @@ play_frame'
 
 To create my own data frame, I used the function pd.series. I put in my data from a list, named the data frame, and then created the index that lined the data up with its respective row. Then using pd.DataFrame I created it into a data frame. To determine how many rows and columns are in a data frame you can use
 
-```data.shape()```
+```
+data.shape()
+```
 
 For rows:
 
-```data.shape[0]``` 
+```
+data.shape[0]
+``` 
 
 For columns:
 
-```data.shape[1]```
+```
+data.shape[1]
+```
+
 
 The alternative terminology for row is an observation and a variable for a column.
 
 **Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?**
 
 To import the data frame, assuming it is in the local folder already:
+
 ```
 path_to_data = 'gapminder.tsv'
 data = pd.read_csv(path_to_data,sep='\t')
 ```
 To look at the year variable:
 
-``` data['year']```
+``` 
+data['year']
+```
 
 By looking at this it can be seen that there is a regular interval of 5 years starting at 1952 going all the way to 2007. You would add 2012 and 2017 to be more current. 
  
 **Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation.**
 To find the lowest life expectancy I used: 
+
 ```
 min_life = data['lifeExp'].min()
 idx_life = (data['lifeExp'] == min_life)
 data_min = data[idx_life]
+
 ```
 
 Rwanda in 1992 had the lowest life expectancy, which was 23.599. This low life expectancy was due to an ongoing civil war that started in 1990 and was still taking place in 1992. 
