@@ -132,7 +132,9 @@ this will show the first row in the data from data frame.
 
 To extract observations from columns:
 
+```data.iloc[[1,3,4,6],[1:4]]```
 
+This gives you the rows 1,3,4, and 6 and then columns 1 through 4.
 
 
 # Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
