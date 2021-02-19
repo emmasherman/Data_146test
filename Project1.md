@@ -2,6 +2,7 @@
 # **Describe what is a package? Also, describe what is a library? What are the two steps you need to execute in order to install a package and then make that library of functions accessible to your workspace and current python work session? Provide examples of how you would execute these two steps using two of the packages we have used in class thus far. Be sure to include an alias in at least one of your two examples and explain why it is a good idea to do so.**
 
 A package is a bundle/ directory of python modules. A library is a group of packages or set of useful functions so that you do not have to write the code from scratch you can just use them after you import them. For example, pandas is a very useful function in data science because it is especially useful when working with data files. In Pycharm in order to execute a function you have to preferences and then python interpreter and install the packages that you want to use. From there in the terminal, you have to import the library that the user need.
+
 For example:
 
 From datetime import date
@@ -76,7 +77,7 @@ To look at the year variable:
 ``` data['year']```
 
 By looking at this it can be seen that there is a regular interval of 5 years starting at 1952 going all the way to 2007. You would add 2012 and 2017 to be more current. 
-# add stretch goal if can 
+ 
 
 # Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation.
 To find the lowest life expectancy I used: 
@@ -97,6 +98,9 @@ Rwanda in 1992 had the lowest life expectancy, which was 23.599. This low life e
 | 779     | Italy         | Europe   | 2007  | 80.546   | 58147733 | 28569.71970 | 1.861228e+12 |
 | 1427    | Spain         | Europe   | 2007  | 80.941   | 40448191 | 28821.06370 | 1.165760e+12 |
 
+Stretch Goal:
+
+German exhibited the most significant increast in gdp.
 
 # You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
 
