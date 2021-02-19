@@ -117,23 +117,31 @@ German exhibited the most significant increast in gdp.
 
 The == is when a statement is true/equals. For example:
 
-```(2+3)==5```
+```
+(2+3)==5
+```
 
 | is for or, it helps to look and see if either or statement is true. For example:
 
-```data_place = data[(data[‘continent’]==’South America’) | (data[‘Year’]==’1992’)] ```
+```
+data_place = data[(data[‘continent’]==’South America’) | (data[‘Year’]==’1992’)] 
+```
 
 This statement is true if either the data is from south America or 1992. It will return both rows with south America as the continent and 1992 as the year, both do not have to be true for every row. Both statements do not have to be true for the data to be returned. 
 
 & is used when subsetting because it looks at a data frame one row at a time and evaluates both conditions for that row and then move to the next one. For example:
 
-```data_place = data[(data[‘continent’]==’North America’) & (data[‘country’]==’United States’)]```
+```
+data_place = data[(data[‘continent’]==’North America’) & (data[‘country’]==’United States’)]
+```
 
 Data with both north America and united states will be returned. 
 
 ^ is XOR, this will return if either operation is true but not if both are true. For example:
 
-```data_place = data[(data[‘continent’]==’South America’) ^ (data[‘Year’]==’1992’)]```
+```
+data_place = data[(data[‘continent’]==’South America’) ^ (data[‘Year’]==’1992’)]
+```
 
 This will return data with South America or 1992 but not data with South America and 1992 in the row.
 
@@ -141,19 +149,25 @@ This will return data with South America or 1992 but not data with South America
 
 .iloc is used when fetching data by its integer position.
 
-```data.iloc[2:5]``` 
+```
+data.iloc[2:5]
+``` 
 
 This will return all of the integer positions between 2 and 5. 
 
 .loc on the other hand fetches rows by their label. 
 
-```data.loc[0]```
+```
+data.loc[0]
+```
 
 this will show the first row in the data from data frame. 
 
 To extract observations from columns:
 
-```data.iloc[[1,3,4,6],[1:4]]```
+```
+data.iloc[[1,3,4,6],[1:4]]
+```
 
 This gives you the rows 1,3,4, and 6 and then columns 1 through 4.
 
@@ -165,6 +179,7 @@ An api, also known as an application programming interface, is a computer somewh
 For example:
 
 First bring in the url and insert the data into a folder so that it is useable
+
 ```
 url = "https://api.covidtracking.com/v1/states/daily.csv"
 import os
@@ -179,6 +194,7 @@ Then you have to create a file:
 file_name_short = 'ctp_' + str(dt.now(tz = pytz.utc)).replace(' ', '_') + '.csv'
 file_name = os.path.join(data_folder, file_name_short) #join the path to the name of the file
 ```
+
 Then you have to request the file and using requests we can open and use this file on our local instance.:
 
 ```
@@ -188,6 +204,7 @@ file_name = data_folder
 with open(file_name, 'wb') as f:
     f.write(r.content)
 ```
+
 Finally import the file that was just downloaded as a pandas Data Frame:
 
 ```
@@ -205,9 +222,13 @@ The apply() function allows the user to apply the input to this function to an e
 An alternative is to just call columns. if you call the columns you want and create a copy of the data frame it will show just the columns you want to see. For example: 
 First you call the columns that you want:
 
-```cols = ['date', 'state','positive', 'death']```
+```
+cols = ['date', 'state','positive', 'death']
+```
 
 Then you can create a copy of just these columns of information:
 
-```df_filtered = df[cols].copy()```
+```
+df_filtered = df[cols].copy()
+```
 
