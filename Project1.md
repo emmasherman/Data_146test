@@ -143,5 +143,12 @@ The apply() function allows the user to apply the input to this function to an e
 
 # Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
 
-# you need to do this one
+An alternative is to just call columns. if you call the columns you want and create a copy of the data frame it will show just the columns you want to see. For example: 
+First you call the columns that you want:
+
+```cols = ['date', 'state','positive', 'death']```
+
+Then you can create a copy of just these columns of information:
+
+```df_filtered = df[cols].copy()```
 
