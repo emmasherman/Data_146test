@@ -25,7 +25,7 @@ it is now:
 pd.read_csv()
 ```
 
-**Describe what is a data frame? Identify a library of functions that is particularly useful for working with data frames. In order to read a file in its remote location within the file system of your operating system, which command would you use? Provide an example of how to read a file and import it into your work session in order to create a new data frame. Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? Also, provide an example that describes a data frame you created. How do you determine how many rows and columns are in a data frame? Is there an alternate terminology for describing rows and columns?
+**Describe what is a data frame? Identify a library of functions that is particularly useful for working with data frames. In order to read a file in its remote location within the file system of your operating system, which command would you use? Provide an example of how to read a file and import it into your work session in order to create a new data frame. Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? Also, provide an example that describes a data frame you created. How do you determine how many rows and columns are in a data frame? Is there an alternate terminology for describing rows and columns?**
 
 A data frame is a table of data that is represented in rows and columns. The most useful library for working with data frames is pandas. To import data, you have to use the read read_csv() function. 
 
@@ -65,7 +65,7 @@ For columns:
 
 The alternative terminology for row is an observation and a variable for a column.
 
-**Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?
+**Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?**
 
 To import the data frame, assuming it is in the local folder already:
 ```
@@ -78,7 +78,7 @@ To look at the year variable:
 
 By looking at this it can be seen that there is a regular interval of 5 years starting at 1952 going all the way to 2007. You would add 2012 and 2017 to be more current. 
  
-**Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation.
+**Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation.**
 To find the lowest life expectancy I used: 
 ```
 min_life = data['lifeExp'].min()
@@ -88,7 +88,7 @@ data_min = data[idx_life]
 
 Rwanda in 1992 had the lowest life expectancy, which was 23.599. This low life expectancy was due to an ongoing civil war that started in 1990 and was still taking place in 1992. 
 
-**Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable. Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image). Stretch goal: which of the four European countries exhibited the most significant increase in total gross domestic product during the previous 5-year period (to 2007)?
+**Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable. Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image). Stretch goal: which of the four European countries exhibited the most significant increase in total gross domestic product during the previous 5-year period (to 2007)?**
 
 |         | Country       | Continent| year  | lifeExp  |  pop     | gdpPercap   |  gdp         |
 | ------- |:-------------:| --------:|------:|---------:|---------:|------------:|-------------:|
@@ -101,7 +101,7 @@ Stretch Goal:
 
 German exhibited the most significant increast in gdp.
 
-**You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
+**You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.**
 
 The == is when a statement is true/equals. For example:
 
@@ -125,7 +125,7 @@ Data with both north America and united states will be returned.
 
 This will return data with South America or 1992 but not data with South America and 1992 in the row.
 
- **Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
+ **Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.**
 
 .iloc is used when fetching data by its integer position.
 
@@ -146,7 +146,7 @@ To extract observations from columns:
 This gives you the rows 1,3,4, and 6 and then columns 1 through 4.
 
 
-**Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
+**Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.**
 
 An api, also known as an application programming interface, is a computer somewhere in the world on the internet. An API is used when you want a local instance of python to connect with a remote server and can be used to call the data itself. 
 
@@ -184,11 +184,11 @@ df = pd.read_csv(file_name)
 ```
 
 
-**Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
+**Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?**
 
 The apply() function allows the user to apply the input to this function to an entire data frame. These inputs can include anonymous functions or lamdas that you can apply to the entire data frame. Using apply() is a good alternative to writing a loop. This a much faster and more eifficent way than writing a loop for every function you want to use on your data frame. 
 
-**Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
+**Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?**
 
 An alternative is to just call columns. if you call the columns you want and create a copy of the data frame it will show just the columns you want to see. For example: 
 First you call the columns that you want:
