@@ -97,6 +97,7 @@ Rwanda in 1992 had the lowest life expectancy, which was 23.599. This low life e
 | 779     | Italy         | Europe   | 2007  | 80.546   | 58147733 | 28569.71970 | 1.861228e+12 |
 | 1427    | Spain         | Europe   | 2007  | 80.941   | 40448191 | 28821.06370 | 1.165760e+12 |
 
+
 # You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
 
 The == is when a statement is true/equals. For example:
