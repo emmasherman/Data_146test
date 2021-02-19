@@ -119,7 +119,7 @@ This will return data with South America or 1992 but not data with South America
 # Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
 
 .iloc is used when fetching data by its integer position, for instance if you want rows 3 through 6 you can say data.iloc[2:5]. .loc on the other hand fetches rows by their label. For example, if you want to see what data is from year 2003 you can say data.loc[2003].
-# fix this one
+# fix 
 
 # Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
 
