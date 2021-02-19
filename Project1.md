@@ -118,8 +118,22 @@ This will return data with South America or 1992 but not data with South America
 
 # Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
 
-.iloc is used when fetching data by its integer position, for instance if you want rows 3 through 6 you can say data.iloc[2:5]. .loc on the other hand fetches rows by their label. For example, if you want to see what data is from year 2003 you can say data.loc[2003].
-# fix 
+.iloc is used when fetching data by its integer position.
+
+```data.iloc[2:5]``` 
+
+This will return all of the integer positions between 2 and 5. 
+
+.loc on the other hand fetches rows by their label. 
+
+```data.loc[0]```
+
+this will show the first row in the data from data frame. 
+
+To extract observations from columns:
+
+
+
 
 # Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
 
@@ -127,15 +141,37 @@ An api, also known as an application programming interface, is a computer somewh
 
 For example:
 
+First bring in the url and insert the data into a folder so that it is useable
+```
+url = "https://api.covidtracking.com/v1/states/daily.csv"
+import os
+data_folder = 'data'
+if not os.path.exists(data_folder):
+    os.makedirs(data_folder)
+```
+
+Then you have to create a file:
+
+```    
+file_name_short = 'ctp_' + str(dt.now(tz = pytz.utc)).replace(' ', '_') + '.csv'
+file_name = os.path.join(data_folder, file_name_short) #join the path to the name of the file
+```
+Then you have to request the file and using requests we can open and use this file on our local instance.:
+
 ```
 import requests
-url = "https://api.covidtracking.com/v1/states/daily.csv"
 r = requests.get(url)
 file_name = data_folder
 with open(file_name, 'wb') as f:
     f.write(r.content)
 ```
-Using requests we can open and use this file on our local instance.
+Finally import the file that was just downloaded as a pandas Data Frame:
+
+```
+import pandas as pd
+df = pd.read_csv(file_name)
+```
+
 
 # Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
 
