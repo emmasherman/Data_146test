@@ -78,7 +78,13 @@ To look at the year variable:
 By looking at this it can be seen that there is a regular interval of 5 years starting at 1952 going all the way to 2007. You would add 2012 and 2017 to be more current. 
 # add stretch goal if can 
 
-# Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation. 
+# Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation.
+To find the lowest life expectancy I used: 
+```
+min_life = data['lifeExp'].min()
+idx_life = (data['lifeExp'] == min_life)
+data_min = data[idx_life]
+```
 
 Rwanda in 1992 had the lowest life expectancy, which was 23.599. This low life expectancy was due to an ongoing civil war that started in 1990 and was still taking place in 1992. 
 
@@ -117,7 +123,17 @@ This will return data with South America or 1992 but not data with South America
 
 # Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
 
-# you need to do this one
+An api, also known as an application programming interface, is a computer somewhere in the world on the internet. An API is used when you want a local instance of python to connect with a remote server and can be used to call the data itself. 
+
+For example:
+
+```
+import requests
+url = "https://api.covidtracking.com/v1/states/daily.csv"
+r = requests.get(url)
+with open(file_name, 'wb') as f:
+    f.write(r.content)
+```
 
 # Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
 
