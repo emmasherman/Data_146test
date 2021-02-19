@@ -90,13 +90,18 @@ Rwanda in 1992 had the lowest life expectancy, which was 23.599. This low life e
 
 # Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable. Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image). Stretch goal: which of the four European countries exhibited the most significant increase in total gross domestic product during the previous 5-year period (to 2007)?
 
-# you need to do it
+|         | Country       | Continent| year  | lifeExp  |  pop     | gdpPercap   |  gdp         |
+| ------- |:-------------:| --------:|------:|---------:|---------:|------------:|-------------:|
+| 575     | Germany       | Europe   | 2007  | 79.406   | 82400996 | 32170.37442 | 2.650871e+12 |
+| 539     | France        | Europe   | 2007  | 80.657   | 61083916 | 30470.01670 | 1.861228e+12 |
+| 779     | Italy         | Europe   | 2007  | 80.546   | 58147733 | 28569.71970 | 1.861228e+12 |
+| 1427    | Spain         | Europe   | 2007  | 80.941   | 40448191 | 28821.06370 | 1.165760e+12 |
 
 # You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
 
 The == is when a statement is true/equals. For example:
 
-```x==5```
+```(2+3)==5```
 
 | is for or, it helps to look and see if either or statement is true. For example:
 
