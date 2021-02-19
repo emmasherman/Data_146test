@@ -113,7 +113,7 @@ Stretch Goal:
 
 German exhibited the most significant increast in gdp.
 
-**You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.**
+ **You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.**
 
 The == is when a statement is true/equals. For example:
 
@@ -121,7 +121,7 @@ The == is when a statement is true/equals. For example:
 (2+3)==5
 ```
 
-| is for or, it helps to look and see if either or statement is true. For example:
+'|' is for or, it helps to look and see if either or statement is true. For example:
 
 ```
 data_place = data[(data[‘continent’]==’South America’) | (data[‘Year’]==’1992’)] 
