@@ -15,7 +15,7 @@ In this model the Runner Ranking is ordinal data because it represents each runn
 
 X: 50th Percentile
 
-![50th Percentile](histogram_1.png)
+![50th](histogram_1.png)
 
 Mean: 0.5025754772439277
 
@@ -23,7 +23,7 @@ Median: 0.5062831511790717
 
 X:Right Skewed
 
-![50th Percentile](Right_Skewed.png)
+![Right](Right_Skewed.png)
 
 Mean: 0.0915604985073129
 
@@ -31,11 +31,11 @@ Median: 0.04841800001882425
 
 X:Left Skewed
 
-![50th Percentile](histogram_1.png)
+![Left](Left_Skewed.png)
 
-Mean: 0.5025754772439277
+Mean: 0.9097102468340331
 
-Median: 0.5062831511790717
+Median: 0.9512730487601434
 
 **Using the gapminder data set, produce two overlapping histograms within the same plot describing life expectancy in 1952 and 2007. Plot the overlapping histograms using both the raw data and then after applying a logarithmic transformation (np.log10() is fine). Which of the two resulting plots best communicates the change in life expectancy amongst all of these countries from 1952 to 2007?**
 
