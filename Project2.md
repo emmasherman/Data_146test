@@ -4,12 +4,12 @@ Continuous data is data that can take any value within in a range. For example p
 
 |  Runner Ranking  | Runner        | Race time  | 
 | ---------------- |:-------------:| ----------:|
-| 1                | Germany       | 15:45      | 
-| 2                | France        | 16:43      |
-| 3                | Italy         | 16:46      |
-| 4                | Spain         | 16:56      | 
+| 1                | Emma          | 15:45      | 
+| 2                | Matt          | 16:43      |
+| 3                | Jojo          | 16:46      |
+| 4                | Cole          | 16:56      | 
 
-
+In this model the Runner Ranking is ordinal data because it represents each runner's place in the race. The Runner column represents nominal data and the race time represents continuous data. All three columns are features with the correlation between runner ranking and race time being the target. From this table you can see that the preson with the fastest time of 15 mintues and 45 seconds will get the first place ranking in this race. 
 **Comment out the seed from your randomly generated data set of 1000 observations and use the beta distribution to produce a plot that has a mean that approximates the 50th percentile. Also produce both a right skewed and left skewed plot by modifying the alpha and beta parameters from the distribution. Be sure to modify the widths of your columns in order to improve legibility of the bins (intervals). Include the mean and median for all three plots.**
 
 **Using the gapminder data set, produce two overlapping histograms within the same plot describing life expectancy in 1952 and 2007. Plot the overlapping histograms using both the raw data and then after applying a logarithmic transformation (np.log10() is fine). Which of the two resulting plots best communicates the change in life expectancy amongst all of these countries from 1952 to 2007?**
