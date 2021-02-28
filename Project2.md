@@ -23,11 +23,15 @@ Median: 0.5062831511790717
 
 X:Right Skewed
 
-Mean: 0.5025754772439277
+![50th Percentile](Right_Skewed.png)
 
-Median: 0.5062831511790717
+Mean: 0.0915604985073129
+
+Median: 0.04841800001882425
 
 X:Left Skewed
+
+![50th Percentile](histogram_1.png)
 
 Mean: 0.5025754772439277
 
