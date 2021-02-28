@@ -1,8 +1,8 @@
 **Describe continuous, ordinal and nominal data. Provide examples of each. Describe a model of your own construction that incorporates variables of each type of data. You are perfectly welcome to describe your model using english rather than mathematical notation if you prefer. Include hypothetical variables that represent your features and target.**
 
-Continuous data is data that can take any value within in a range. For example people's height is continuous.
+Continuous data is data that can take any value within in a range. For example people's height and age are continuous.
 
-Ordinal is categorical data but with a ranking or set scale to it. For example, in the gapminder data the data is broken down in to different years.
+Ordinal data has a ranking or set scale to it. For example, in the gapminder data the data is broken down in to different years. The top 10 students in a grade would also be ordinal because it is a ranking of students. Also, eventhough this type of data has numeric values, they are used as categorical. 
 
 Nominal data is caegorical data that is grouped or labeled without quantitative value. There is not neccessarily logic to the categories. For example, in the gapminder dataset country and continent are two categories that are nominal.
 
