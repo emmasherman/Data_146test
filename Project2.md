@@ -15,7 +15,7 @@ In this model the Runner Ranking is ordinal data because it represents each runn
 
 X: 50th Percentile
 
-[50th Percentile](histogram_1.png)
+![50th Percentile](histogram_1.png)
 
 Mean: 0.5025754772439277
 
