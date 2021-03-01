@@ -45,3 +45,11 @@ Median: 0.9512730487601434
 
 
 **Using the seaborn library of functions, produce a box and whiskers plot of population for all countries at the given 5-year intervals. Also apply a logarithmic transformation to this data and produce a second plot. Which of the two resulting box and whiskers plots best communicates the change in population amongst all of these countries from 1952 to 2007?**
+
+Box and whisker plot: 
+
+![boxplot_1](boxplot.png)
+
+Box and whisker plot with logarithmic transformation:
+
+![boxplot_2](Log_boxplot.png)
