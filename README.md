@@ -5,4 +5,4 @@
 ## Projects
 [Project 1](Project1.md)
 
-[Projec 2](Project2.md)
+[Project 2](Project2.md)
