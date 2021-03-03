@@ -39,9 +39,15 @@ Median: 0.9512730487601434
 
 **Using the gapminder data set, produce two overlapping histograms within the same plot describing life expectancy in 1952 and 2007. Plot the overlapping histograms using both the raw data and then after applying a logarithmic transformation (np.log10() is fine). Which of the two resulting plots best communicates the change in life expectancy amongst all of these countries from 1952 to 2007?**
 
+Histogram:
+
 ![historgram_1](histogram_2.png)
 
+Histogram with logarithmic transformation:
+
 ![histogram_2](Log_1.png)
+
+The plot that best communicates is the second on with a logarithmic transformation. When doing a logarithmic transformation it shifts the focus from the actual value to how many digits. It also is a scale operator and if the distribution has a gap using the log function enables the values to be on a better scale. Since there is a high variance in the first plot it is hard to guage the difference between the years. Yet, with the logarithmic transformation in the second plot the data is on a better scale it is easier to see the changes in life expectancy between 1952 to 2007. 
 
 
 **Using the seaborn library of functions, produce a box and whiskers plot of population for all countries at the given 5-year intervals. Also apply a logarithmic transformation to this data and produce a second plot. Which of the two resulting box and whiskers plots best communicates the change in population amongst all of these countries from 1952 to 2007?**
@@ -53,3 +59,5 @@ Box and whisker plot:
 Box and whisker plot with logarithmic transformation:
 
 ![boxplot_2](Log_boxplot.png)
+
+The first plot it is hard to learn anything about the data because of the scale that population is on there are large outliers. The logarithmic transformation reduces the difference between the mean and the medain and the large outliers so it better communicates the change in population. 
