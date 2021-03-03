@@ -41,7 +41,7 @@ Median: 0.9512730487601434
 
 Histogram:
 
-![historgram_1](histogram_2.png)
+![historgram_1](hist_1.png)
 
 Histogram with logarithmic transformation:
 
