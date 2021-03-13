@@ -12,11 +12,11 @@ I used 14 folds when running my model. I chose to do 14 folds because there are 
 
 After running the first model I standardized the data before running the training and testing with a linear regression model again. I used Standardized from sklearn as seen here: 
 
-'' 
+``` 
 from sklearn.preprocessing import StandardScaler as SS
 ss = SS()
 homes_form = ss.fit_transform(homes)
-''
+```
 
 After processing the data I ran the model again with the standardized data and got:
 
