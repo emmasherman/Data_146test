@@ -29,6 +29,20 @@ The performance of all of these models were not strong and this could be due to 
 
 ## Then train your dataset with the asking price as your target using a ridge regression model. Now how did your model perform? What were the training and testing scores you produced? Did you standardize the data? Interpret and assess your output. ##
 
+By adding a degree of bias to the regression estimates, ridge regression reduces the standard errors.
+
+Not Standardized: 
+
+Optimal alpha value: 89.899
+Training score for this value: 0.019
+Testing score for this value: 0.011
+
+Standardized: 
+
+Optimal alpha value: 82.828
+Training score for this value: 0.019
+Testing score for this value: 0.014
+
 ## Next, go back, train and test each of the three previous model types/specifications, but this time use the dataset charleston_act.csv (actual sale prices). How did each of these three models perform after using the dataset that replaced asking price with the actual sale price? What were the training and testing scores you produced? Interpret and assess your output. ##
 
 ## Go back and also add the variables that indicate the zip code where each individual home is located within Charleston County, South Carolina. Train and test each of the three previous model types/specifications. What was the predictive power of each model? Interpret and assess your output. ##
