@@ -23,7 +23,9 @@ After processing the data I ran the model again with the standardized data and g
 Training: 0.019
 Testing: -0.034
 
+There is not much change from the oringial model in regards to the outcome. The model did not perform well. For this run of the model, like the first question, I used 14 folds to try and get the most consistent outcome as possible. 
 
+The performance of all of these models were not strong and this could be due to the fact that beds, baths, and sqft might not be good predictive indicators for the asking price of a house. 
 
 ## Then train your dataset with the asking price as your target using a ridge regression model. Now how did your model perform? What were the training and testing scores you produced? Did you standardize the data? Interpret and assess your output. ##
 
