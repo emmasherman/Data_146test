@@ -25,11 +25,12 @@ Testing: -0.034
 
 There is not much change from the oringial model in regards to the outcome. The model did not perform well. For this run of the model, like the first question, I used 14 folds to try and get the most consistent outcome as possible. 
 
-The performance of all of these models were not strong and this could be due to the fact that beds, baths, and sqft might not be good predictive indicators for the asking price of a house. 
 
 ## Then train your dataset with the asking price as your target using a ridge regression model. Now how did your model perform? What were the training and testing scores you produced? Did you standardize the data? Interpret and assess your output. ##
 
-By adding a degree of bias to the regression estimates, ridge regression reduces the standard errors.
+By adding a degree of bias to the regression estimates, ridge regression reduces the standard errors. 
+
+Using the ridge regression function and the DoKfold function these are the values that I got:
 
 Not Standardized: 
 
@@ -42,6 +43,8 @@ Standardized:
 Optimal alpha value: 82.828
 Training score for this value: 0.019
 Testing score for this value: 0.014
+
+I ran the model standardizing the data and then not standardized data and got similar results both times. Even though the ridge regression reduces the standard errors the Training and testing scores are similar from the previous two models. The performance of all of these models were not strong and this could be due to the fact that beds, baths, and sqft might not be good predictive indicators for the asking price of a house. 
 
 ## Next, go back, train and test each of the three previous model types/specifications, but this time use the dataset charleston_act.csv (actual sale prices). How did each of these three models perform after using the dataset that replaced asking price with the actual sale price? What were the training and testing scores you produced? Interpret and assess your output. ##
 
