@@ -98,3 +98,7 @@ Using the zip code variables had a much better outcome in the models.
 ## Finally, consider the model that produced the best results. Would you estimate this model as being overfit or underfit? If you were working for Zillow as their chief data scientist, what action would you recommend in order to improve the predictive power of the model that produced your best results from the approximately 700 observations (716 asking / 660 actual)? ##
 
 The model that produced the best results was the first model without standardizing the data and used the zip code variables as features. Using this geographical data provides a better insight into the correlation because it is a better indicator of price. I think the model is an underfit model. 
+
+One recommendation that I would make is to take into account more features. Only looking at beds, baths, sqft, and zip code is not the best model because it does not take into account several other features that people need to think about when buying a house. For instance, features such as year the house was and the specific geographical location would be good indicators to add. Charleston varying physical geography so it would good to see whether a house is near a body of water or in the city because these would features would influence the price of a house.
+
+This amount of data is not a good representation of the all of Charleston, South Carolina. 
