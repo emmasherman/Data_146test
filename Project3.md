@@ -32,6 +32,8 @@ Testing: -0.034
 
 There is not much change from the oringial model in regards to the outcome. This model all shows that there is little correlation between the target and the feature values even when you standardized the data. For this run of the model, like the first question, I used 14 folds to try and get the most consistent outcome as possible. 
 
+Like the nonstandardized model, this model is not much better as seen in the scatter plot, while come points are closer together in certain spots, there is no clusters indicating little to no correlation again.
+
 ![stan1](Standard_nozip_act.png)
 
 ## Then train your dataset with the asking price as your target using a ridge regression model. Now how did your model perform? What were the training and testing scores you produced? Did you standardize the data? Interpret and assess your output. ##
@@ -44,7 +46,9 @@ Training score for this value: 0.019
 
 Testing score for this value: 0.014
 
-Even though the ridge regression reduces the standard errors the Training and testing scores are similar from the previous two models. The performance of all of these models were not strong and this could be due to the fact that beds, baths, and sqft might not be good predictive indicators for the asking price of a house. 
+Even though the ridge regression reduces the standard errors the Training and testing scores are similar from the previous two models. The performance of all of these models were not strong and this could be due to the fact that beds, baths, and sqft might not be good predictive indicators for the asking price of a house.
+
+For a ridge regression model, when the model is strong the rigde regression is shown as a curve and you can see where the points meet and there is a correlation within the date. Yet, if you look at this graph you can see that there is no universal point, rather the points are all over the place. This shows that the model is a poor fit. 
 
 ![ridge1](ridge_nozip_act.png)
 
