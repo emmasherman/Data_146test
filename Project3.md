@@ -91,7 +91,7 @@ Ridge Regression:
 
 ![ridge2](ridge_nozip_act.png)
 
-Similaryly to when we ran the models for with the charleston asking price, the model does not perform much better as seen in the charts above. For the first two models there is little correlation in the points on the scatterplots and the ridge regression graph shows that the points do not create a curve with a point at the top of the curve where all the points meet, like a strong outcome would have. Instead the ridge regression graph shows points all over the place with no correlation between them. 
+Similaryly to when we ran the models for with the charleston asking price, the model does not perform much better as seen in the charts above. For the first two models there is little correlation in the points on the scatterplots and the ridge regression graph shows that the points do not create a curve with a point at the top of the curve where all the points meet, like a strong outcome would have. Instead the ridge regression graph shows points all over the place with no correlation between them. As you can see in the graphs for both the actual and asking price data, there is not much correlation between the selected features and targets. 
 
 ## Go back and also add the variables that indicate the zip code where each individual home is located within Charleston County, South Carolina. Train and test each of the three previous model types/specifications. What was the predictive power of each model? Interpret and assess your output. ##
 
@@ -113,14 +113,17 @@ Training: 0.338
 Testing: 0.219
 
 Training: 0.338
-Testing: -37794899751853440205062144.000
+Testing: 0.298
 
 Optimal alpha value: 50.505
 Training score for this value: 0.336
 Testing score for this value: 0.272
 
-Using the zip code variables had a much better outcome in the models. 
+Using the zip code variables had a much better outcome in the models. While these outcomes are still not as close to one as we would want but it is a much better outcome than the orginial model. By adding in the zip code to the features it vastly increased the correlation in the models. The zip codes help the models be more telling becuase grouping houses in similar zip codes is more telling about why houses are a certain aking price and actual price. This stronger correlation can be seen in the graphs of all three models. 
 
+![zip1](act_zip.png)    ![zip2](ridgewithzip.png).
+
+As you can see in these graphs by adding the zip code variables the models are performing much better. 
 
 ## Finally, consider the model that produced the best results. Would you estimate this model as being overfit or underfit? If you were working for Zillow as their chief data scientist, what action would you recommend in order to improve the predictive power of the model that produced your best results from the approximately 700 observations (716 asking / 660 actual)? ##
 
