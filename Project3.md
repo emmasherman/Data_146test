@@ -11,7 +11,7 @@ I used 14 folds when running this model. I chose to do 14 folds because there ar
 
 As you can see when looking at a scatter plot of the model as seen below. If this were a good model the points would be clusterd together in mostly the same spot, but with this model the points are spread out, indicating very little to no correlation. 
 
-![mod1](model1scatter_act.png)
+![mod1](ask_1.png)
 
 
 ## Now standardize your features (again beds, baths and area) prior to training and testing with a linear regression model (also again with asking price as your target). Now how did your model perform? What were the training and testing scores you produced? How many folds did you assign when partitioning your training and testing data? Interpret and assess your output. ##
@@ -34,7 +34,7 @@ There is not much change from the oringial model in regards to the outcome. This
 
 Like the nonstandardized model, this model is not much better as seen in the scatter plot, while come points are closer together in certain spots, there is no clusters indicating little to no correlation again.
 
-![stan1](Standard_nozip_act.png)
+![stan1](stand_ask.png)
 
 ## Then train your dataset with the asking price as your target using a ridge regression model. Now how did your model perform? What were the training and testing scores you produced? Did you standardize the data? Interpret and assess your output. ##
 
@@ -50,7 +50,7 @@ Even though the ridge regression reduces the standard errors the Training and te
 
 For a ridge regression model, when the model is strong the rigde regression is shown as a curve and you can see where the points meet and there is a correlation within the date. Yet, if you look at this graph you can see that there is no universal point, rather the points are all over the place. This shows that the model is a poor fit. 
 
-![ridge1](ridge_nozip_act.png)
+![ridge1](rr_ask.png)
 
 ## Next, go back, train and test each of the three previous model types/specifications, but this time use the dataset charleston_act.csv (actual sale prices). How did each of these three models perform after using the dataset that replaced asking price with the actual sale price? What were the training and testing scores you produced? Interpret and assess your output. ##
 
@@ -76,7 +76,22 @@ Training score for this value: 0.004
 
 Testing score for this value: -0.006
 
+
 For this data since there was a slighlty smaller amount of data I decided to use 10 splits to try and make the results consistent. Yet, the results from running these models with the actual price data performed poorly as well. With the R-squared value so small it does not seem like there is a strong correlation between these target and feature values. 
+
+Model One:
+
+![mod2](model1scatter_act.png)
+
+Standardized: 
+
+![stan2](Standard_nozip_act.png)
+
+Ridge Regression:
+
+![ridge2](ridge_nozip_act.png)
+
+Similaryly to when we ran the models for with the charleston asking price, the model does not perform much better as seen in the charts above. For the first two models there is little correlation in the points on the scatterplots and the ridge regression graph shows that the points do not create a curve with a point at the top of the curve where all the points meet, like a strong outcome would have. Instead the ridge regression graph shows points all over the place with no correlation between them. 
 
 ## Go back and also add the variables that indicate the zip code where each individual home is located within Charleston County, South Carolina. Train and test each of the three previous model types/specifications. What was the predictive power of each model? Interpret and assess your output. ##
 
