@@ -6,8 +6,13 @@ Training: 0.019
 
 Testing: -0.024
 
-Since a perfect model would have the result of 1, this model did not perform well since these outcomes show that are far from 1. With such low R-squared value it seems to show that there is little to no correlation between the features and the target values. Neither the training or the testing data is predicted well in this model. 
-I used 14 folds when running my model. I chose to do 14 folds because there are approximately 715 data entries so there approximately 50 pieces of data in each fold for each fold. I chose this bin size because this way the splits are not too big but all not too many splits because more splits will make the testing be smaller and therefore the results will be less consistency. 
+Since a perfect model has a result of 1, you can see this model did not perform well. With such a low R-squared value, the model shows that there is little to no correlation between the features and the target values. Neither the training nor the testing data is predicted well in this model. 
+I used 14 folds when running this model. I chose to do 14 folds because there are approximately 715 data entries, so there approximately 50 pieces of data in each fold for each fold. I chose this bin size because this way the splits are not too big and there are not too many splits when running the model. I did this since more splits will make the testing smaller and, therefore, the results will be less consistent. 
+
+As you can see when looking at a scatter plot of the model as seen below. If this were a good model the points would be clusterd together in mostly the same spot, but with this model the points are spread out, indicating very little to no correlation. 
+
+![mod1](model1scatter_act.png)
+
 
 ## Now standardize your features (again beds, baths and area) prior to training and testing with a linear regression model (also again with asking price as your target). Now how did your model perform? What were the training and testing scores you produced? How many folds did you assign when partitioning your training and testing data? Interpret and assess your output. ##
 
@@ -27,6 +32,7 @@ Testing: -0.034
 
 There is not much change from the oringial model in regards to the outcome. This model all shows that there is little correlation between the target and the feature values even when you standardized the data. For this run of the model, like the first question, I used 14 folds to try and get the most consistent outcome as possible. 
 
+![stan1](Standard_nozip_act.png)
 
 ## Then train your dataset with the asking price as your target using a ridge regression model. Now how did your model perform? What were the training and testing scores you produced? Did you standardize the data? Interpret and assess your output. ##
 
@@ -39,6 +45,8 @@ Training score for this value: 0.019
 Testing score for this value: 0.014
 
 Even though the ridge regression reduces the standard errors the Training and testing scores are similar from the previous two models. The performance of all of these models were not strong and this could be due to the fact that beds, baths, and sqft might not be good predictive indicators for the asking price of a house. 
+
+![ridge1](ridge_nozip_act.png)
 
 ## Next, go back, train and test each of the three previous model types/specifications, but this time use the dataset charleston_act.csv (actual sale prices). How did each of these three models perform after using the dataset that replaced asking price with the actual sale price? What were the training and testing scores you produced? Interpret and assess your output. ##
 
@@ -97,8 +105,7 @@ Using the zip code variables had a much better outcome in the models.
 
 ## Finally, consider the model that produced the best results. Would you estimate this model as being overfit or underfit? If you were working for Zillow as their chief data scientist, what action would you recommend in order to improve the predictive power of the model that produced your best results from the approximately 700 observations (716 asking / 660 actual)? ##
 
-The model that produced the best results was the first model without standardizing the data and used the zip code variables as features. Using this geographical data provides a better insight into the correlation because it is a better indicator of price. I think the model is an underfit model. 
+The model that produced the best results was the first model without standardizing the data and used the zip code variables as features. I think the model is an underfit model. With only 700 homes represented in these data sets,  it is not a good representation of all of Charleston, South Carolina. Another reason that the model is underfit is that there are so few features represented in the models,  that two homes can seem the same but have completely different prices. Both of these reasons help explain why it would be a good idea to look at more than just the features used in the models above.
 
-One recommendation that I would make is to take into account more features. Only looking at beds, baths, sqft, and zip code is not the best model because it does not take into account several other features that people need to think about when buying a house. For instance, features such as year the house was and the specific geographical location would be good indicators to add. Charleston varying physical geography so it would good to see whether a house is near a body of water or in the city because these would features would influence the price of a house.
+One action I would recommendation, is to take into account more features. Only looking at beds, baths, sqft, and zip code is not the best model because it does not take into account several other features that people need to think about when buying a house. For instance, features such as the year the house was built and the specific geographical location would be good indicators to add to the models. Charleston has varying physical geography so it would good to see whether a house is near a body of water or in the city because these features would influence the price of a house. Also, in order to get better results Zillow would want to add in more data entries to represent all of Charleston. 
 
-This amount of data is not a good representation of the all of Charleston, South Carolina. 
