@@ -123,11 +123,11 @@ Using the zip code variables had a much better outcome in the models. While thes
 
 ![zip1](act_zip.png)    ![zip2](ridgewithzip.png).
 
-As you can see in these graphs by adding the zip code variables the models are performing much better. 
+As you can see in these graphs by adding the zip code variables the models are performing better than without. 
 
 ## Finally, consider the model that produced the best results. Would you estimate this model as being overfit or underfit? If you were working for Zillow as their chief data scientist, what action would you recommend in order to improve the predictive power of the model that produced your best results from the approximately 700 observations (716 asking / 660 actual)? ##
 
-The model that produced the best results was the first model without standardizing the data and used the zip code variables as features. I think the model is an underfit model. With only 700 homes represented in these data sets,  it is not a good representation of all of Charleston, South Carolina. Another reason that the model is underfit is that there are so few features represented in the models,  that two homes can seem the same but have completely different prices. Both of these reasons help explain why it would be a good idea to look at more than just the features used in the models above.
+The model that produced the best results was the irst model without standardizing the data and used the zip code variables as features. I think the model is an underfit model. With only 700 homes represented in these data sets,  it is not a good representation of all of Charleston, South Carolina. Another reason that the model is underfit is that there are so few features represented in the models,  that two homes can seem the same but have completely different prices. Both of these reasons help explain why it would be a good idea to look at more than just the features used in the models above.
 
 One action I would recommendation, is to take into account more features. Only looking at beds, baths, sqft, and zip code is not the best model because it does not take into account several other features that people need to think about when buying a house. For instance, features such as the year the house was built and the specific geographical location would be good indicators to add to the models. Charleston has varying physical geography so it would good to see whether a house is near a body of water or in the city because these features would influence the price of a house. Also, in order to get better results Zillow would want to add in more data entries to represent all of Charleston. 
 
