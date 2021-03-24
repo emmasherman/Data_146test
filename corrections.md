@@ -40,22 +40,34 @@ def DoKFold(model, X, y, k, standardize=False, random_state=146):
  ```
 
 ## Question 17 ##
+
+From the previous two questions I used the following code to see which feature is most correlated to the target variable:
+
  ```
+from sklearn.preprocessing import StandardScaler as SS
+ss = SS()
+Xs = ss.fit_transform(X)
+Xs_df = pd.DataFrame(X, columns = X_names)
+Xsy_df = Xs_df.copy()
+Xsy_df['y'] = y
+Xsy_df.corr()
 corrmat = Xsy_df.corr()
 f, ax = plt.subplots(figsize=(12, 9))
 sns.heatmap(corrmat, square=True, annot=True)
 plt.show()
  ```
+ 
 ![heatmap](heatmap_1.png)
+
+From looking at the heatmap I could see that MedInc was the most correlated variable and from there using the following code allows me to see the coefficient of determination for MedInc:
 
 
  ```
  np.round(np.corrcoef(X_df['MedInc'], y)[0][1]**2,2)
   ```
 
-Answer: 0.47
+I got the answer: 0.47
 
-For this question was not sure how to calculate the coefficient of deterimination
 
 ## Question 18 ##
 
@@ -65,7 +77,8 @@ Training: 0.60520
 
 Testing: 0.62439
 
-These results have been standardized, have a random state of 146, and use 20 fold, making this the right answer. 
+These results have been standardized, have a random state of 146, and use 20 fold, making this the right answer.
+
 ## Question 19 ##
 
 I made a very stupid mistake for this question and the following. When I ran the ridge regression and the lasso model I put the testing score instead of the alpha value as my answer. 
