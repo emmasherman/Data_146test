@@ -91,18 +91,42 @@ a_range = np.linspace(20, 30, 101)
   ```
 Then creating a for loop to find the alpha and testing and training scores for the ridge regression. The results I got are: 
 
-
+Optimal alpha value: 20.00000
+Training score for this value: 0.60518
+Testing score for this value: 0.62429
 
 
 ## Question 20 ##
+
+Just like the question above, for question 19 I did not put the alpha value as my answer. I ran the Lasso and got the following answers:
+
+Optimal alpha value: 0.00042
+Training score for this value: 0.60519
+Testing score for this value: 0.62440
 
 ## Question 21 ## 
 
 For question 21 as well as question 22 I did not understand the question. When I first read the question I thought it was asking us to rerun the model without using kfolds and a training and testing for loop on an entire dataset so I tried to rewrite the DoKFold function without KFold or training and testing data, which would never work. Now rereading the question I see that would not make sense at all. 
 
-I now understand that you have to use the output from when I ran the X_df.corr() in question 15 to see which feature is the least correlated.
+I now understand that you have to use the output from when I ran the X_df.corr() in question 15 to see which feature is the least correlated, which is AveOccup (maybe)
 
-From there I 
+From there I used the following code: 
+
+  ```
+print(X_names[5])
+lin = LR(); rid = Ridge(alpha=25.8); las = Lasso(alpha = 0.00186)
+lin.fit(Xs, y); rid.fit(Xs, y); las.fit(Xs, y);
+lin.coef_[5], rid.coef_[5], las.coef_[5]
+  ```
+
+Got these outcomes: (-0.039326266978148866, -0.039412573728940366, -0.03761823364553458)
+This code uses the three models from before with the alpha values that we found to fit the model for the variable AveOccup. From this I found the smallest coefficient to be the ridge regression. 
+
 
 ## Question 22 ##
 
+For this question I did the same as the previous question but this time with the variable MedInc because it is the most correlated. 
+
+The outcomes: (0.82961930428045, 0.8288892465528181, 0.8200140807502059)
+
+The smallest coefficient would be the Lasso model which is 0.8200140807502059. 
