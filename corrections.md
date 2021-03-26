@@ -38,6 +38,10 @@ def DoKFold(model, X, y, k, standardize=False, random_state=146):
         return train_scores, test_scores, train_mse, test_mse
         
  ```
+ 
+ Then I imported the data: 
+ 
+ 
 
 ## Question 15 ##
 
@@ -53,6 +57,7 @@ plt.show()
  ```
 ![heatmap](heatmap_1.png)
 
+For this question I created a copy of the 
 
 ## Question 16 ##
 
@@ -148,6 +153,8 @@ The smallest coefficient would be the Lasso model which is 0.8200140807502059.
 
 ## Question 23 ##
 
+Using the DoKfold function I found the MSE for the ridge regression:
+
   ```
 idx = np.argmin(rid_te_mse)
 print(a_range[idx], rid_tr[idx], rid_te[idx], rid_tr_mse[idx], rid_te_mse[idx])
@@ -157,6 +164,8 @@ plt.xlabel('$\\alpha$')
 plt.ylabel('Avg MSE')
 plt.show()
   ```
+  
+When I ran the code I found that they have the same optimum alpha value. 
   
 ## Question 24 ##
 
