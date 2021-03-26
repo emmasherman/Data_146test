@@ -1,4 +1,4 @@
-First we create the DoKFold in class that helped solve the following problems
+First I created the following DoKFold function:
 
 ```
 def DoKFold(model, X, y, k, standardize=False, random_state=146):
@@ -39,9 +39,22 @@ def DoKFold(model, X, y, k, standardize=False, random_state=146):
         
  ```
 
-## Question 17 ##
+## Question 15 ##
 
-From the previous two questions I used the following code to see which feature is most correlated to the target variable:
+ ```
+Xy = X_df.copy()
+Xy['y'] = y
+# 2. calculate the correlations of all variables
+Xy.corr()
+corrmat = Xy.corr()
+f, ax = plt.subplots(figsize=(12, 9))
+sns.heatmap(corrmat, square=True, annot=True)
+plt.show()
+ ```
+![heatmap](heatmap_1.png)
+
+
+## Question 16 ##
 
  ```
 from sklearn.preprocessing import StandardScaler as SS
@@ -51,15 +64,11 @@ Xs_df = pd.DataFrame(X, columns = X_names)
 Xsy_df = Xs_df.copy()
 Xsy_df['y'] = y
 Xsy_df.corr()
-corrmat = Xsy_df.corr()
-f, ax = plt.subplots(figsize=(12, 9))
-sns.heatmap(corrmat, square=True, annot=True)
-plt.show()
  ```
- 
-![heatmap](heatmap_1.png)
 
-From looking at the heatmap I could see that MedInc was the most correlated variable and from there using the following code allows me to see the coefficient of determination for MedInc:
+## Question 17 ##
+
+From the previous two questions I used the code to see which feature is most correlated to the target variable. From looking at the heatmap found in question 15 I could see that MedInc was the most correlated variable and from there using the following code allows me to see the coefficient of determination for MedInc:
 
 
  ```
@@ -126,7 +135,37 @@ This code uses the three models from before with the alpha values that we found 
 ## Question 22 ##
 
 For this question I did the same as the previous question but this time with the variable MedInc because it is the most correlated. 
+I used the following code: 
+
+  ```
+print(X_names[0])
+lin.coef_[0], rid.coef_[0], las.coef_[0]
+  ```
 
 The outcomes: (0.82961930428045, 0.8288892465528181, 0.8200140807502059)
 
 The smallest coefficient would be the Lasso model which is 0.8200140807502059. 
+
+## Question 23 ##
+
+  ```
+idx = np.argmin(rid_te_mse)
+print(a_range[idx], rid_tr[idx], rid_te[idx], rid_tr_mse[idx], rid_te_mse[idx])
+
+plt.plot(a_range, rid_te_mse,'or')
+plt.xlabel('$\\alpha$')
+plt.ylabel('Avg MSE')
+plt.show()
+  ```
+  
+## Question 24 ##
+
+  ```
+idx = np.argmin(las_te_mse)
+print(las_a_range[idx], las_tr[idx], las_te[idx], las_tr_mse[idx], las_te_mse[idx])
+plt.plot(las_a_range, las_te_mse,'or')
+plt.xlabel('$\\alpha$')
+plt.ylabel('Avg MSE')
+plt.show()
+  ```
+  
