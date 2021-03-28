@@ -13,4 +13,4 @@
 ## Midterm Corrections
 [Midterm Corrections](corrections.md)
 
-[Extra Credit Write up](talk.md)
+[Extra Credit Write Up](talk.md)
