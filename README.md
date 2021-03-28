@@ -12,3 +12,5 @@
 
 ## Midterm Corrections
 [Midterm Corrections](corrections.md)
+
+[Extra Credit Write_uo](talk.md)
