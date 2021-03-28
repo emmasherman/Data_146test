@@ -236,7 +236,7 @@ When running the MSE I found the I found the optimum value to be 26.10000.
   
 ## Question 24 ##
 
-Just like the previous question I used the DoKFold function nad then found the MSE using Lasso: 
+Just like the previous question I used the DoKFold function and then found the MSE using Lasso: 
 
   ```
 idx = np.argmin(las_te_mse)
