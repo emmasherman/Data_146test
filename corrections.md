@@ -103,6 +103,10 @@ I got the answer: 0.47
 
 For question 18 I did not use my DoKFold function to run my linear regression but instead just used the for loop to run the training and testing data. These numbers are slightly off from the right answers which I believe is due to me not standardizing the data. When I used the DoKFold function and ran the data again I got the following results:
 
+  ```
+train_scores, test_scores, train_mse, test_mse = DoKFold(LinearRegression(), X, y, k, True)
+  ```
+  
 Training: 0.60630
 
 Testing: 0.60198
@@ -135,7 +139,7 @@ for a in a_range:
 idx = np.argmax(rid_te)
 
   ```
-Then creating a for loop to find the alpha and testing and training scores for the ridge regression. The results I got are: 
+The results I got are: 
 
 Optimal alpha value: 25.80000
 Training score for this value: 0.60627
@@ -171,6 +175,7 @@ for a in las_a_range:
 
 idx = np.argmax(las_te)
   ```
+I got the following results: 
 
 Optimal alpha value: 0.00186
 Training score for this value: 0.60615
@@ -193,7 +198,7 @@ lin.fit(Xs, y); rid.fit(Xs, y); las.fit(Xs, y);
 lin.coef_[5], rid.coef_[5], las.coef_[5]
   ```
 
-Got these outcomes: (-0.039326266978148866, -0.039412573728940366, -0.03761823364553458)
+Got these outcomes: -0.039326266978148866, -0.039412573728940366, -0.03761823364553458
 This code uses the three models from before with the alpha values that we found to fit the model for the variable AveOccup. From this I found the smallest coefficient to be the ridge regression. 
 
 
@@ -207,7 +212,7 @@ print(X_names[0])
 lin.coef_[0], rid.coef_[0], las.coef_[0]
   ```
 
-The outcomes: (0.82961930428045, 0.8288892465528181, 0.8200140807502059)
+The outcomes: 0.82961930428045, 0.8288892465528181, 0.8200140807502059
 
 The smallest coefficient would be the Lasso model which is 0.8200140807502059. 
 
