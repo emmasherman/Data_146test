@@ -85,7 +85,9 @@ lasso regression:
 ## Which of the models produced the best results in predicting wealth of all persons throughout the smaller West African country being described? ##
 
 WealthC:
+
 ![ridge1](wealthcridge.png)
 
 WealthI:
+
 ![ridge2](ridge_wealthI.png)
