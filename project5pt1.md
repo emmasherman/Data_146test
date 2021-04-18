@@ -44,9 +44,9 @@ Testing score for this value: 0.73521
 
 These results are slightly better than the linear regression. 
 
-![ridge1](wealthcridge.png)
 
 lasso regression:
+
 For lasso I started with a range of 0.0001 to 0.003 and then tried several different configurations to try and find the best alpha. I kept trying different numbers until I ended up using 0.00025 to 0.00029 which gave me the results: 
 
 Optimal alpha value: 0.00028
@@ -56,6 +56,8 @@ Testing score for this value: 0.73515
 These results are slightly worse than the ridge results. 
 
 ## WealthI ##
+
+For WealthI I ran the same three tests as I did for WealthI and got the following results:
 
 linear regression and compute the MSE:
 
@@ -72,9 +74,18 @@ R^2: 0.8258367991339716, 0.8252464937866233
 When I standardized the data there was no change in the R^2 value. Yet, when looking at the coefficients individually, you can see a large change between the standardized and nonstandardized values just like WealthC. For example, 2.31986195e+03 is now 8.64993728e+03 with the standardized data. There was no impact on the R^2 value when the data is standardized but there is an impact on the individual coefficients.
 
 ridge regression:
+For the ridge regression I used (75, 79, 20) as my range and got the following results. These results 
+
+Optimal alpha value: 77.47368421
+Training score for this value: 0.82583635
+Testing score for this value: 0.82529766
 
 lasso regression:
 
 ## Which of the models produced the best results in predicting wealth of all persons throughout the smaller West African country being described? ##
 
+WealthC:
 ![ridge1](wealthcridge.png)
+
+WealthI:
+![ridge2](ridge_wealthI.png)
