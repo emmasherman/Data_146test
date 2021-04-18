@@ -74,15 +74,24 @@ R^2: 0.8258367991339716, 0.8252464937866233
 When I standardized the data there was no change in the R^2 value. Yet, when looking at the coefficients individually, you can see a large change between the standardized and nonstandardized values just like WealthC. For example, 2.31986195e+03 is now 8.64993728e+03 with the standardized data. There was no impact on the R^2 value when the data is standardized but there is an impact on the individual coefficients.
 
 ridge regression:
-For the ridge regression I used (75, 79, 20) as my range and got the following results. These results 
+For the ridge regression I used a_range = np.linspace(88, 95, 20) as my range and got the following results. These results 
 
-Optimal alpha value: 77.47368421
-Training score for this value: 0.82583635
-Testing score for this value: 0.82529766
+Optimal alpha value: 95.00000000
+Training score for this value: 0.82583752
+Testing score for this value: 0.82530794
 
 lasso regression:
 
+For lasso, using the range 0.7 to 1.2 I got the following results: 
+
+Optimal alpha value: 0.36736842105263157
+Training score for this value: 0.8258371472437247
+Testing score for this value: 0.825327484115254
+
 ## Which of the models produced the best results in predicting wealth of all persons throughout the smaller West African country being described? ##
+
+Overall, WealthI had much higher R^2 values which indicates that they are more correlated to the features than WealthC is. Even when running the ridge and lasso and finding the optimum alpha value WelathI is overall more correlated. Specifically you can see that the ridge and lasso had better results than the linear regression for both targets. Overall the ridge regression for WealthI was the model that produced the best results, but only by a small margin. 
+As you can see in the following two graphs, these are the results of the optimal alpha value during the ridge regression for both WealthC and WealthI: 
 
 WealthC:
 
@@ -90,4 +99,4 @@ WealthC:
 
 WealthI:
 
-![ridge2](ridge_wealthI.png)
+![ridge2](ridge_wealthI2.png)
