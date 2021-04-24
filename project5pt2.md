@@ -12,6 +12,9 @@ Range 40-60 graoh:
 
 KNN Model adding a distance weight: 
 
+By adding a distance weight I had to definitely go up in my range values. I checked a range of values from 10-1080, not all at once, but in different iterations. When adding a distance weight it clearly shows that train dataset is much more accurate than the test data as seen in the graph below. The best results that I found was with the range 500-550 with results: 501, 0.5217179111761835. I bootstrapped this ranged and found similar results after running the data several times so I think it is the best outcome. By adding a distance weight, I did not find as accurate results as I did in the orginial model. 
+
+![KNN3](distance-500-50.png)
 
 Execute a logistic regression method on the data. How did this model fair in terms of accuracy compared to K-nearest neighbors?
 
@@ -19,5 +22,5 @@ Next execute a random forest model and produce the results. See the number of es
 
 Repeat the previous steps after recoding the wealth classes 2 and 3 into a single outcome. Do any of your models improve? Are you able to explain why your results have changed?
 
-Which of the models produced the best results in predicting wealth of all persons throughout the large West African capital city being described? Support your results with plots, graphs and descriptions of your code and its implementation. You are welcome to incorporate snippets to illustrate an important step, but please do not paste verbose amounts of code within your project report. Avoiding setting a seed essentially guarantees the authenticity of your results. You are welcome to provide a link in your references at the end of your (part 2) Project 5 report.
+Which of the models produced the best results in predicting wealth of all persons throughout the large West African capital city being described? 
 
