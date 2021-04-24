@@ -32,11 +32,39 @@ As you can see the accuracy is better with the logistic regression model than th
 
 ## 4. Repeat the previous steps after recoding the wealth classes 2 and 3 into a single outcome. Do any of your models improve? Are you able to explain why your results have changed? ##
 
-KNN Model: Creating classes 2 and 3 into a single outcome I got the results: 96, 0.5617374328940947, 84, 0.5583211322596389. I used the range 70 to 100 and ran th model several times to see the outcomes. These were my best 2 results which can be seen in the grpahs below. 
+KNN Model: Creating classes 2 and 3 into a single outcome I got the results: 96, 0.5617374328940947, 84, 0.5583211322596389. I used the range 70 to 100 and ran th model several times to see the outcomes. These were my best 2 results which can be seen in the graphs below. These results are more accurate than the first time I ran the KKN Model. 
 
 ![KNN4](recode-70-1001.png)
 
 ![KNN5](recode-70-1002.png)
 
+KNN adding distance weight: 
+My results were: 803, 0.5226939970717424. I used the range 800-900 as you can see in the graph below. These results were more slightly accurate but not by much. 
+
+![KNN6](recode_distance.png)
+
+Logistic Regression
+
+I executed a logistic regression method on the data and got the following results:
+
+train score logistic regression: 0.540690104166666 
+
+test score logistic regression: 0.5583211322596389
+
+When I ran the logistic regression method the test score was overall more accurate when using the combined data, but the train score was a little lower than the previously run data. 
+
+random forest model:
+Results: 
+
+[0.5425060040575315, -0.1722591586120077]
+[0.544537013049613, -0.1690172159483201]
+[0.5457291686880748, -0.17114877149159446]
+[0.545946369075202, -0.17179536464963352]
+
+After running the model several times I have concluded that the number of trees that produces the best model is 5000. 
+
+
+
 ## 5. Which of the models produced the best results in predicting wealth of all persons throughout the large West African capital city being described? ##
 
+Out of all the models that I produced the one that had the best results in predicting wealth of all persons throughout the large West African captial city 
