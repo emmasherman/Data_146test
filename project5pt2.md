@@ -1,4 +1,17 @@
-Execute a K-nearest neighbors classification method on the data. What model specification returned the most accurate results? Did adding a distance weight help?
+## 1. Execute a K-nearest neighbors classification method on the data. What model specification returned the most accurate results? Did adding a distance weight help?## 
+
+KKN model: For this model I tried several different K-ranges to try and figure out which model would return the most accurate results. I first tried the range 10-100. After looking at the graph, which is seen below, I saw that once the training and testing data were the closest between the range 40-60 and then slowly declined. From this observation I tried a few more ranges, such as 10-80, but ultimately decided that the range 40-60 gave the best results. These results are:46, 0.5456320156173743. These results can also be seen in the graph below.
+
+Range 10-100 graph:
+
+![KNN1](10-100.png)
+
+Range 40-60 graoh:
+
+![KNN2](40-60.png)
+
+KNN Model adding a distance weight: 
+
 
 Execute a logistic regression method on the data. How did this model fair in terms of accuracy compared to K-nearest neighbors?
 
