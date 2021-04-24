@@ -32,5 +32,11 @@ As you can see the accuracy is better with the logistic regression model than th
 
 ## 4. Repeat the previous steps after recoding the wealth classes 2 and 3 into a single outcome. Do any of your models improve? Are you able to explain why your results have changed? ##
 
+KNN Model: Creating classes 2 and 3 into a single outcome I got the results: 96, 0.5617374328940947, 84, 0.5583211322596389. I used the range 70 to 100 and ran th model several times to see the outcomes. These were my best 2 results which can be seen in the grpahs below. 
+
+![KNN4](recode-70-1001.png)
+
+![KNN5](recode-70-1002.png)
+
 ## 5. Which of the models produced the best results in predicting wealth of all persons throughout the large West African capital city being described? ##
 
