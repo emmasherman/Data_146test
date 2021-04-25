@@ -20,14 +20,20 @@ By adding a distance weight I had to definitely go up in my range values. I chec
 
 I executed a logistic regression method on the data and got the following results:
 
-train score logistic regression:0.5582682291666666
-
-test score logistic regression: 0.5402635431918009
+Training Score: 0.54688
+Testing Score: 0.55149
 
 As you can see the accuracy is better with the logistic regression model than the K-nearest neighbor models. 
 
 ## 3. Next execute a random forest model and produce the results. See the number of estimators (trees) to 100, 500, 1000 and 5000 and determine which specification is most likely to return the best model. Also test the minimum number of samples required to split an internal node with a range of values. Also produce results for your four different estimator values by both comparing both standardized and non-standardized (raw) results. ##
+When I executed the random forest model I got the following results: 
 
+|   Estimators    | Training              | Testing              | 
+| --------------- |:---------------------:| --------------------:|
+| 100             | 0.8017578125          | 0.5046364080039043   | 
+| 500             | 00.8017578125         | 0.5021961932650073   | 
+| 1000            | 0.8017578125          | 0.5026842362127867   | 
+| 5000            | 0.8017578125          | 0.5080527086383602   |
 
 
 ## 4. Repeat the previous steps after recoding the wealth classes 2 and 3 into a single outcome. Do any of your models improve? Are you able to explain why your results have changed? ##
