@@ -1,10 +1,11 @@
 ## 1. Execute a K-nearest neighbors classification method on the data. What model specification returned the most accurate results? Did adding a distance weight help? ## 
 
-KKN model: For this model I tried several different K-ranges to try and figure out which model would return the most accurate results. I first tried the range 10-100. After looking at the graph, which is seen below, I saw that once the training and testing data were the closest between the range 40-60 and then slowly declined. From this observation I tried a few more ranges, such as 10-80, but ultimately decided that the range 40-60 gave the best results. These results are:46, 0.5456320156173743. These results can also be seen in the graph below.
+KKN model: For this model I tried several different K-ranges to try and figure out which model would return the most accurate results. I first tried the range 10-100. After looking at the graph, which is seen below, I saw that once the training and testing data were the closest between the range 40-60 and then slowly declined. From this observation I tried a few more ranges, such as 10-80, but ultimately decided that the range 40-60 gave the best results. These results are: 40, 0.5607613469985359.
+These results can also be seen in the graph below.
 
 Range 10-100 graph:
 
-![KNN1](10-100.png)
+![KNN1](finally.png)
 
 Range 40-60 graoh:
 
@@ -95,4 +96,4 @@ With the recoding of classes 2 and 3 into a single outcome the models overall ar
 
 ## 5. Which of the models produced the best results in predicting wealth of all persons throughout the large West African capital city being described? ##
 
-Out of all the models that I produced the one that had the best results in predicting wealth of all persons throughout the large West African captial city 
+Overall the models that used the data that did not combine the wealth classes 2 and 3 were accurate over the condensed outcomes. Out of all the models that I produced the one that had the best results in predicting wealth of all persons throughout the large West African captial city is the KNN model without distance added. This model had an accuracy 0.5607613469985359, which is about 56%, which is better than the 54% that I got from the other models. 
