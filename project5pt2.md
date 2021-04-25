@@ -25,7 +25,8 @@ Testing Score: 0.55149
 
 As you can see the accuracy is better with the logistic regression model than the K-nearest neighbor models. 
 
-## 3. Next execute a random forest model and produce the results. See the number of estimators (trees) to 100, 500, 1000 and 5000 and determine which specification is most likely to return the best model. Also test the minimum number of samples required to split an internal node with a range of values. Also produce results for your four different estimator values by both comparing both standardized and non-standardized (raw) results. ##
+## 3. Next execute a random forest model and produce the results. See the number of estimators (trees) to 100, 500, 1000 and 5000 and determine which specification is most likely to return the best model. Also test the minimum number of samples required to split an internal node with a range of values. Also produce results for your four different estimator values by both comparing both standardized and non-standardized (raw) results. ##\
+
 When I executed the random forest model I got the following results: 
 
 |   Estimators    | Training              | Testing              | 
@@ -35,9 +36,12 @@ When I executed the random forest model I got the following results:
 | 1000            | 0.8017578125          | 0.5026842362127867   | 
 | 5000            | 0.8017578125          | 0.5080527086383602   |
 
+From these results, I determines that 5000 is the specification that is most likely to return the best model. I then tested the minimum number of samples required to split an internal node with a range of values. From this I found that a range between 20 and 30 brought the training and testing scores closer together with the training scores being between 0.634765625 and 0.650390625 and the testing scores being between 0.5588091752074182 and 0.5641776476329917. 
+
+Next I standardized the data and compared the accuracy between the standardized and nonstandardized data, which can be seen in the below. As you can see, for the non-standardized data 5000 estimators is the most accurate while for the standardized data 1000 estimators is the most accurate. 
 
 
-|   Estimators    | Not Standardized      | Standardized         | 
+|   Estimators    | Non-Standardized      | Standardized         | 
 | --------------- |:---------------------:| --------------------:|
 | 100             | 0.49                  | 0.50                 | 
 | 500             | 0.50                  | 0.49                 | 
