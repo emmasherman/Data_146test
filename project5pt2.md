@@ -31,9 +31,18 @@ When I executed the random forest model I got the following results:
 |   Estimators    | Training              | Testing              | 
 | --------------- |:---------------------:| --------------------:|
 | 100             | 0.8017578125          | 0.5046364080039043   | 
-| 500             | 00.8017578125         | 0.5021961932650073   | 
+| 500             | 0.8017578125          | 0.5021961932650073   | 
 | 1000            | 0.8017578125          | 0.5026842362127867   | 
 | 5000            | 0.8017578125          | 0.5080527086383602   |
+
+
+
+|   Estimators    | Not Standardized      | Standardized         | 
+| --------------- |:---------------------:| --------------------:|
+| 100             | 0.49                  | 0.50                 | 
+| 500             | 0.50                  | 0.49                 | 
+| 1000            | 0.50                  | 0.51                 | 
+| 5000            | 0.51                  | 0.50                 |
 
 
 ## 4. Repeat the previous steps after recoding the wealth classes 2 and 3 into a single outcome. Do any of your models improve? Are you able to explain why your results have changed? ##
@@ -62,10 +71,7 @@ When I ran the logistic regression method the test score was overall more accura
 random forest model:
 Results: 
 
-[0.5425060040575315, -0.1722591586120077]
-[0.544537013049613, -0.1690172159483201]
-[0.5457291686880748, -0.17114877149159446]
-[0.545946369075202, -0.17179536464963352]
+With the recoding of the variables into one 
 
 After running the model several times I have concluded that the number of trees that produces the best model is 5000. 
 
