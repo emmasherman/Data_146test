@@ -20,8 +20,8 @@ By adding a distance weight I had to definitely go up in my range values. I chec
 
 I executed a logistic regression method on the data and got the following results:
 
-Training Score: 0.54688
-Testing Score: 0.55149
+Training Score: 0.5452473958333334
+Testing Score: 0.5495363591996095
 
 As you can see the accuracy is better with the logistic regression model than the K-nearest neighbor models. 
 
@@ -51,33 +51,45 @@ Next I standardized the data and compared the accuracy between the standardized 
 
 ## 4. Repeat the previous steps after recoding the wealth classes 2 and 3 into a single outcome. Do any of your models improve? Are you able to explain why your results have changed? ##
 
-KNN Model: Creating classes 2 and 3 into a single outcome I got the results: 96, 0.5617374328940947, 84, 0.5583211322596389. I used the range 70 to 100 and ran th model several times to see the outcomes. These were my best 2 results which can be seen in the graphs below. These results are more accurate than the first time I ran the KKN Model. 
+KNN Model: Creating classes 2 and 3 into a single outcome I got the results: 45, 0.5451439726695949. I used the range 40 to 60 and ran the model several times to see the outcomes. These were my best results which can be seen in the graph below. These results are not as accurate as the first time I ran the KKN Model. 
 
-![KNN4](recode-70-1001.png)
-
-![KNN5](recode-70-1002.png)
+![KNN4](recode.png)
 
 KNN adding distance weight: 
-My results were: 803, 0.5226939970717424. I used the range 800-900 as you can see in the graph below. These results were more slightly accurate but not by much. 
+My results were: 544, 0.4987798926305515. I used the range 500-550 as you can see in the graph below. These results not as accurate as the original data. 
 
-![KNN6](recode_distance.png)
+![KNN6](recode_distance2.png)
 
 Logistic Regression
 
 I executed a logistic regression method on the data and got the following results:
 
-train score logistic regression: 0.540690104166666 
+train score logistic regression: 0.5546875
 
-test score logistic regression: 0.5583211322596389
+test score logistic regression:  0.5348950707662274
 
 When I ran the logistic regression method the test score was overall more accurate when using the combined data, but the train score was a little lower than the previously run data. 
 
 random forest model:
-Results: 
 
-With the recoding of the variables into one 
+I got the following results: 
 
-After running the model several times I have concluded that the number of trees that produces the best model is 5000. 
+|   Estimators    | Training              | Testing              | 
+| --------------- |:---------------------:| --------------------:|
+| 100             | 0.7952473958333334    | 0.5061005368472425   | 
+| 500             | 0.7952473958333334    | 0.5036603221083455   | 
+| 1000            | 0.7952473958333334    | 0.5056124938994632   | 
+| 5000            | 0.7952473958333334    | 0.4992679355783309]  |
+
+|   Estimators    | Non-Standardized      | Standardized         | 
+| --------------- |:---------------------:| --------------------:|
+| 100             | 0.509028794533919     | 0.486090775988287    | 
+| 500             | 0.4895070766227428    | 0.4895070766227428   | 
+| 1000            |0.48316251830161056    | 0.5012201073694486   | 
+| 5000            | 0.5075646656905808    | 0.49731576378721326  |
+
+
+With the recoding of classes 2 and 3 into a single outcome the models overall are not as accurate. There are some slight increases in accuracy, such as for the logistic regression training data score but overall the combination of the two variables into a single outcome did not give more accurate results. With the combination of the classes 2 and 3 the predicitve ability decreases and this could be due to a lower variability in the data. 
 
 
 
